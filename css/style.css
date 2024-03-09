@@ -4,7 +4,7 @@
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
-html,body{color: #252B42;font-weight: 500;font-family: Montserrat; height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+html,body{color: #252B42;background: #fafafa;font-weight: 500;font-family: Montserrat; height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
@@ -45,6 +45,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 
 /*--------------------------ШАПКА-----------------------------*/
+
 .header {
     position: absolute;
     width: 100%;
@@ -52,6 +53,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     top: 0;
     z-index: 50;
 }
+
 .header__container {
     display: flex;
     min-height: 104px;
@@ -64,9 +66,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     line-height: 32px;
     color: inherit;
 }
+
 .header__menu {
     margin: 0px 0px 0px 133px;
 }
+
 @media (max-width: 479px) {
     .header_container {
         min-height: 70px;
@@ -87,15 +91,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
         font-size: 18px;
     }
 }
+
 .menu__list {
     display: flex;
     flex-wrap: wrap;
 }
-.menu__item {
-}
+
 .menu__item:not(:last-child) {
     margin: 0px 21px 0px 0px;
 }
+
 .menu__link {
     color: #737373;
     font-weight: 600;
@@ -108,15 +113,57 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .page {
     flex: 1 1 auto;
 }
-.page__main-block {
+.page__main-block{
 }
+.page__services {
+    position: relative;
+    z-index: 2;
+    margin: -111px 0px 0px 0px;
+}
+
+/*------------------------------------------------------------*/
+
+
+/*--------------------------HEADER-BLOCK----------------------*/
+
+.header-block {
+    text-align: center;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+}
+
+.header-block__title {
+    font-size: 40px;
+    line-height: 142%;
+}
+
+.header-block__title:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+
+.header-block__sub-title {
+    line-height: 142%;
+    color: #737373;
+}
+
+@media (max-width: 992px) {
+    .header-block__title {
+        font-size: 35px;
+    }
+}
+@media (max-width: 767px) {
+    .header-block__title {
+        font-size: 30px;
+    }
+}
+
+
+/*------------------------------------------------------------*/
+
 
 /*--------------------------MAIN-BLOCK------------------------*/
 .main-block {
     position: relative;
-}
-
-.main-block__container {
 }
 
 .main-block__body {
@@ -131,7 +178,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
         padding: 120px 0px 191px 0px;
     }
 }
-
 @media (max-width: 479px) {
     .main-block__body {
         padding: 115px 0px 160px 0px;
@@ -225,36 +271,27 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
         opacity: 0.5;
     }
 }
+/*------------------------------------------------------------*/
 
-/*---------------------MAIN-SERVICES------------------------*/
 
-.page__services {
-    position: relative;
-    margin: -111px 0px 0px 0px;
-    z-index: 2;
-}
+/*-----------------------MAIN-SERVICES------------------------*/
+
 .services {
-}
-.services__container {
-}
-._container {
 }
 
 .services__body {
-    
 }
 
 @media (min-width: 670px) {
     .services__body {
         display: flex;
         flex-wrap: wrap;
-        margin: 0px -15px -30px;
+        margin: 0px -15px;
     }
 }
 
 .services__column {
     flex: 0 1 33.333%;
-    margin: 0px 0px 30px 0px;
 }
 
 @media (min-width: 670px) {
@@ -282,10 +319,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     height: 100%;
 }
 
-@media (max-width: px) {
-
-}
-
 .item-service > *:not(:last-child) {
     margin: 0px 0px 10px 0px;
 }
@@ -302,9 +335,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     color: #FFFFFF;
 }
 
-.item-service__icon {
-}
-
 .item-service__title {
     color: #252B42;
     font-size: 24px;
@@ -312,13 +342,100 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     line-height: 133%;
     letter-spacing: 0.1px;
 }
+
 .item-service__text {
     color: #737373;
     line-height: 142%;
 }
+
+/*------------------------------------------------------------*/
+
+
+/*---------------------MAIN-ADVANTAGES------------------------*/
+
+.advantages {
+    padding: 80px 0px;
+}
+
+@media (max-width: 992px) {
+    .advantages {
+        padding: 30px 0px;
+    }
+}
+@media (max-width: 767px) {
+    .advantages {
+        padding: 40px 0px;
+    }
+}
+
+.advantages__container {
+}
+
+.advantages__header {
+    margin: 0px 0px 50px 0px;
+}
+
+.advantages__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+}
+
+.advantages__column {
+    padding: 0px 15px;
+    margin: 0px 0px 30px 0px;
+    flex: 0 1 25%;
+}
+
+@media (max-width: 1000px) {
+    .advantages__column {
+        flex: 0 1 50%;
+    }
+}
+@media (max-width: 560px) {
+    .advantages__column {
+        flex: 0 1 100%;
+    }
+}
+
+.advantages__item {
+    background-color: #FFFFFF;
+    padding: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.advantages__item > *.menu__item:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+
+.advantages__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.advantages__value {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 142%;
+}
+
+.advantages__text {
+    letter-spacing: 0.1px;
+    color: #737373;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/*------------------------------------------------------------*/
+
 
 /*--------------------------ПОДВАЛ----------------------------*/
 
 .footer {
 
 }
+
+/*------------------------------------------------------------*/
